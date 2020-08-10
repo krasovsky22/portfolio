@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 type NavigationBarProps = {
   toogleNavBar: (arg1: boolean) => void;
@@ -33,10 +34,18 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
       <Collapse isOpen={isToggled} navbar className="justify-content-end">
         <Nav navbar={!isToggled} vertical={isToggled}>
           <NavItem>
-            <NavLink href="/">Home</NavLink>
+            <NavLink>
+              <Link to="/" onClick={() => toogleNavBar(false)}>
+                Home
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/">About</NavLink>
+            <NavLink>
+              <Link to="/about" onClick={() => toogleNavBar(false)}>
+                About
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/">Work</NavLink>

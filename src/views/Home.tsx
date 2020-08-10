@@ -13,12 +13,12 @@ const IamStrings = ['A Developer', 'A Youtuber', 'A Designer', 'A Father'];
 
 const Home: React.FC = () => {
   const [currentText, setCurrentText] = useState<string>(IamStrings[0]);
+  const [interval, setIntervalState] = useState<NodeJS.Timeout | null>(null);
 
-  let interval: NodeJS.Timeout;
   let key = 0;
   useLifecycle(
     () => {
-      interval = setInterval(() => {
+      const tInterval = setInterval(() => {
         key++;
         if (key >= IamStrings.length) {
           key = 0;
@@ -26,9 +26,11 @@ const Home: React.FC = () => {
 
         setCurrentText(IamStrings[key]);
       }, 2000);
+
+      setIntervalState(tInterval);
     },
     () => {
-      clearInterval(interval);
+      interval && clearInterval(interval);
     }
   );
   return (
