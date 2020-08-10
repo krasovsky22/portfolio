@@ -65,6 +65,7 @@ section {
       font-size: 7vw;
       color: $color-white;
       margin-bottom: 60px;
+      font-weight: 700;
     }
 
     .contact-me-button {
@@ -72,27 +73,13 @@ section {
       font-weight: 500;
       font-size: 15px;
       transition: 0.2s linear;
+      width: 30vw;
+      min-width: 100px;
 
       &:hover {
         color: $color-white;
       }
     }
-
-    // a {
-    //   position: relative;
-    //   display: inline-block;
-    //   margin-top: 20px;
-    //   background: #fff;
-    //   color: #000;
-    //   padding: 10px 30px;
-    //   text-decoration: none;
-    //   font-size: 1.2em;
-    //   font-weight: 500;
-
-    //   @media (max-width: $media-max-width) {
-    //     font-size: 1em;
-    //   }
-    // }
   }
 }
 
