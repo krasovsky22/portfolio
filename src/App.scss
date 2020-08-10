@@ -12,6 +12,10 @@ $color-white: #fff;
   }
 
   .nav-link {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
     &:hover {
       color: #44dbfb !important;
     }
@@ -35,13 +39,19 @@ $color-white: #fff;
 }
 
 section {
-  height: 100vh;
-  min-height: 500px;
-  width: 100%;
-  position: relative;
+  &.active {
+    transform: translateX(-200px);
+  }
 
-  &.content {
+  & > * {
+    height: 100vh;
+    min-height: 500px;
+    width: 100%;
+    position: relative;
     padding: 100px;
+  }
+
+  .home-content {
     background: url('./assets/background.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
@@ -52,10 +62,6 @@ section {
 
     @media (max-width: $media-max-width) {
       padding: 100px 0px 150px;
-
-      &.active {
-        transform: translateX(-200px);
-      }
     }
   }
 

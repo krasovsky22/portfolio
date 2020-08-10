@@ -20,6 +20,10 @@ const routes: RouteProps[] = [
     exact: true,
     component: lazy(() => import('@views/About')),
   },
+  {
+    path: '*',
+    component: lazy(() => import('@views/Error404')),
+  },
 ];
 
 const App: React.FC = () => {
@@ -32,7 +36,6 @@ const App: React.FC = () => {
           <NavigationBar toogleNavBar={toggleNavBar} isToggled={isToggled} />
           <section
             className={classNames({
-              content: true,
               active: isToggled,
             })}
           >

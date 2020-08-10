@@ -34,8 +34,8 @@ const Home: React.FC = () => {
     }
   );
   return (
-    <>
-      <Container fluid className="text-center home-container home-content">
+    <div className="home-content">
+      <Container fluid className=" text-center home-container">
         <h1>Hi I'm {currentText}</h1>
         <Button
           size="md"
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           </a>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
