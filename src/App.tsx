@@ -1,30 +1,10 @@
 import NavigationBar from '@components/NavigationBar';
 import classNames from 'classnames';
-import React, { lazy, Suspense, useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  RouteProps,
-  Switch,
-} from 'react-router-dom';
+import React, { Suspense, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
-const routes: RouteProps[] = [
-  {
-    path: '/',
-    exact: true,
-    component: lazy(() => import('@views/Home')),
-  },
-  {
-    path: '/about',
-    exact: true,
-    component: lazy(() => import('@views/About')),
-  },
-  {
-    path: '*',
-    component: lazy(() => import('@views/Error404')),
-  },
-];
+import { default as appRoutes } from './Routes';
 
 const App: React.FC = () => {
   const [isToggled, toggleNavBar] = useState<boolean>(false);
@@ -40,7 +20,7 @@ const App: React.FC = () => {
             })}
           >
             <Switch>
-              {routes.map((route, index) => (
+              {appRoutes.map((route, index) => (
                 <Route key={index} {...route}></Route>
               ))}
             </Switch>

@@ -10,6 +10,7 @@ import {
   NavLink,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { PATH_ABOUT, PATH_EDUCATION } from '@/Routes';
 
 type NavigationBarProps = {
   toogleNavBar: (arg1: boolean) => void;
@@ -42,16 +43,27 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
           </NavItem>
           <NavItem>
             <NavLink>
-              <Link to="/about" onClick={() => toogleNavBar(false)}>
+              <Link to={PATH_ABOUT} onClick={() => toogleNavBar(false)}>
                 About
               </Link>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/">Work</NavLink>
+            <NavLink>
+              <Link to={PATH_EDUCATION} onClick={() => toogleNavBar(false)}>
+                Education
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/">Contact</NavLink>
+            <NavLink href="/" disabled>
+              Work
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/" disabled>
+              Contact
+            </NavLink>
           </NavItem>
         </Nav>
       </Collapse>

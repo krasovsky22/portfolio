@@ -39,13 +39,45 @@ $color-white: #fff;
 }
 
 section {
+  background-color: #f1f1f1;
+  height: 100%;
+
+  .section-title {
+    text-align: center;
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: #111;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background-color: #111;
+      bottom: 0;
+      left: calc(50% - 40px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 18px;
+      background-color: #48dbfb;
+      border: 4px solid #f1f1f1;
+      left: calc(50% - 12px);
+      bottom: -7px;
+    }
+  }
+
   &.active {
     transform: translateX(-200px);
   }
 
   & > * {
-    height: 100vh;
-    min-height: 500px;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     padding: 100px;
@@ -67,6 +99,7 @@ section {
 
   .home-container {
     width: 100%;
+
     h1 {
       font-size: 7vw;
       color: $color-white;
@@ -84,6 +117,46 @@ section {
 
       &:hover {
         color: $color-white;
+      }
+    }
+  }
+
+  .experience-container {
+    width: 100%;
+    padding: 100px 50px;
+
+    .experience-card {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 120%;
+        background-color: #ddd;
+        left: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #48dbfb;
+        left: -24px;
+        top: 30px;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 15px;
+        color: #444;
       }
     }
   }
