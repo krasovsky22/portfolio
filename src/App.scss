@@ -126,6 +126,8 @@ section {
     padding: 100px 50px;
 
     .experience-card {
+      height: 100%;
+
       &::before {
         content: '';
         position: absolute;
@@ -154,9 +156,11 @@ section {
         font-weight: bold;
       }
 
-      p {
+      ul {
         font-size: 15px;
         color: #444;
+        list-style-type: circle;
+        padding-left: 10px;
       }
     }
   }
