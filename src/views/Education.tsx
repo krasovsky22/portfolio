@@ -32,7 +32,7 @@ const Education: React.FunctionComponent<injectedLoadableProps<
                     <b>{prevExperience.company}</b> ({prevExperience.start_date}{' '}
                     - {prevExperience.end_date})
                   </h4>
-                  <h3>{prevExperience.title}</h3>
+                  <h3>{prevExperience.title} asd</h3>
                 </CardHeader>
               </CardTitle>
               <CardBody>
