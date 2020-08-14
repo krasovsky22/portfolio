@@ -18,7 +18,7 @@ const Education: React.FunctionComponent<injectedLoadableProps<
   PreviouExperienceType
 >> = ({ data }: injectedLoadableProps<PreviouExperienceType>) => {
   return (
-    <div className="experience-container">
+    <div className="experience-container container">
       <div className="text-center mb-5">
         <h1 className="section-title">Education & Experience</h1>
       </div>
