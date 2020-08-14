@@ -23,7 +23,7 @@ const withLoadable = <T extends unknown>(
 
   const data = snapshots?.map((snapshot) => snapshot.val()) ?? [];
 
-  return <Component data={data as T[]} />;
+  return <Component data={data} />;
 };
 
 export default withLoadable;

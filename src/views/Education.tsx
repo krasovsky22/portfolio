@@ -12,8 +12,6 @@ type PreviouExperienceType = {
   title: string;
 };
 
-type EducationProps = injectedLoadableProps<PreviouExperienceType>;
-
 const Education: React.FunctionComponent<injectedLoadableProps<
   PreviouExperienceType
 >> = ({ data }: injectedLoadableProps<PreviouExperienceType>) => {
