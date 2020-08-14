@@ -7,8 +7,6 @@ export interface injectedLoadableProps<T> {
   data: T[];
 }
 
-type SimpleFunctionComponent<P> = (props: P) => React.ReactElement;
-
 const withLoadable = <T extends unknown>(
   Component: React.FunctionComponent<injectedLoadableProps<T>>,
   database: firebase.database.Reference
