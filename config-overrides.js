@@ -9,5 +9,6 @@ module.exports = override(
     '@views': path.resolve(__dirname, './src/views'),
     '@assets': path.resolve(__dirname, './src/assets'),
     '@database': path.resolve(__dirname, './src/database'),
+    '@functions': path.resolve(__dirname, './src/functions'),
   })
 );

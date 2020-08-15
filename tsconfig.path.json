@@ -5,7 +5,8 @@
       "@/*": ["*"],
       "@views/*": ["views/*"],
       "@database/*": ["database/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@functions/*": ["functions/*"]
     }
   }
 }
