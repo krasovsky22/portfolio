@@ -4,6 +4,10 @@ $color-white: #fff;
 $color-grey: #353b48;
 $color-green: #386641;
 
+.card {
+  border-radius: 20px !important;
+}
+
 .navbar {
   .logo {
     width: 44px;
@@ -96,8 +100,9 @@ footer {
 }
 
 section {
-  background-color: #f1f1f1;
   height: 90%;
+  background: linear-gradient(45deg, #588b8b, #ffffff);
+  background-attachment: fixed;
 
   .section-title {
     text-align: center;
@@ -227,8 +232,6 @@ section {
   }
 
   .about-me-container {
-    background: linear-gradient(45deg, #3cb7d1, #000000);
-    background-attachment: fixed;
     min-width: 100vw;
     padding: 100px 50px;
 
@@ -244,7 +247,7 @@ section {
       margin: 20px;
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
       transition: 0.5s;
-      border-radius: 20px;
+
       padding: 0;
 
       &:hover {
