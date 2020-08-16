@@ -18,6 +18,8 @@ export const PreviousExperienceDatabase = firebase
   .database()
   .ref('previous_experience');
 
+export const AboutMeDatabase = firebase.database().ref('about_me');
+
 export type ContactMeFieldsType = {
   name: string;
   email: string;
