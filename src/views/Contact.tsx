@@ -1,23 +1,40 @@
-import React from 'react';
 import {
-  Row,
-  Col,
+  ContactMeFieldsType,
+  InsertContactMeDataQuery,
+} from '@/database/firebase';
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faMobileAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import {
+  Button,
   Card,
   CardSubtitle,
   CardTitle,
+  Col,
   Form,
   FormGroup,
   Input,
-  Button,
+  Row,
 } from 'reactstrap';
-import {
-  faEnvelope,
-  faMobileAlt,
-  faMapMarkerAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact: React.FC = () => {
+  const [isSaving, setIsSaving] = useState<boolean>(false);
+  const [isSaved, setIsSaved] = useState<boolean>(false);
+  const { control, handleSubmit } = useForm<ContactMeFieldsType>({
+    defaultValues: { email: '', subject: '' },
+  });
+  const onSubmit = async (data: ContactMeFieldsType) => {
+    setIsSaving(true);
+    await InsertContactMeDataQuery(data);
+    setIsSaving(false);
+    setIsSaved(true);
+  };
+
   return (
     <div className="contact-container container">
       <div className="text-center mb-5">
@@ -57,33 +74,79 @@ const Contact: React.FC = () => {
         </Col>
       </Row>
 
-      <Form className="contact-form">
+      <Form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <Row form>
           <Col md={6} sm={12}>
             <FormGroup>
-              <Input
-                type="text"
-                name="full_name"
-                placeholder="Your Full Name"
+              <Controller
+                as={
+                  <Input
+                    type="text"
+                    required
+                    disabled={isSaved}
+                    placeholder="Your Full Name"
+                  />
+                }
+                control={control}
+                name="name"
               />
             </FormGroup>
           </Col>
           <Col md={6} sm={12}>
             <FormGroup>
-              <Input type="email" name="email" placeholder="Your Email" />
+              <Controller
+                as={
+                  <Input
+                    type="email"
+                    disabled={isSaved}
+                    placeholder="Your Email"
+                  />
+                }
+                control={control}
+                name="email"
+              />
             </FormGroup>
           </Col>
         </Row>
         <FormGroup>
-          <Input type="text" name="subject" placeholder="Subject" />
+          <Controller
+            as={
+              <Input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                disabled={isSaved}
+              />
+            }
+            name="subject"
+            control={control}
+          />
         </FormGroup>
         <FormGroup>
-          <Input type="textarea" name="message" placeholder="Message" />
+          <Controller
+            as={
+              <Input
+                type="textarea"
+                name="message"
+                disabled={isSaved}
+                placeholder="Message"
+                required
+              />
+            }
+            control={control}
+            name="message"
+          />
         </FormGroup>
         <FormGroup row>
           <Col md={8} />
           <Col md={4}>
-            <Button block>Submit</Button>
+            {isSaving && <Button block>Sending...</Button>}
+            {isSaved && (
+              <Button block color="success">
+                Sent
+              </Button>
+            )}
+            {!isSaving && !isSaved && <Button block>Send</Button>}
           </Col>
         </FormGroup>
       </Form>

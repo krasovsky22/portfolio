@@ -4,6 +4,7 @@ import { lazy } from 'react';
 
 export const PATH_ABOUT = '/about';
 export const PATH_EDUCATION = '/education';
+export const PATH_PLAYGROUND = '/playground';
 export const PATH_CONTACT = '/contact';
 
 export type AppRouteProps = RouteProps & {
@@ -29,7 +30,14 @@ const AppRoutes: AppRouteProps[] = [
   {
     path: PATH_EDUCATION,
     exact: true,
-    name: 'Education',
+    name: 'Works',
+    isNavigation: true,
+    component: lazy(() => import('@views/Education')),
+  },
+  {
+    path: PATH_EDUCATION,
+    exact: true,
+    name: 'Playground',
     isNavigation: true,
     component: lazy(() => import('@views/Education')),
   },

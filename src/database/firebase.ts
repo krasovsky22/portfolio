@@ -17,3 +17,23 @@ firebase.initializeApp(firebaseConfig);
 export const PreviousExperienceDatabase = firebase
   .database()
   .ref('previous_experience');
+
+export type ContactMeFieldsType = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+export const InsertContactMeDataQuery = (
+  data: ContactMeFieldsType
+): Promise<unknown> => {
+  const insertData = {
+    ...data,
+    created_at: firebase.database.ServerValue.TIMESTAMP,
+  };
+  return firebase
+    .database()
+    .ref('contact_me/' + insertData.name)
+    .set(insertData);
+};
