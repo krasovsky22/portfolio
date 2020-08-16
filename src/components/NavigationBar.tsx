@@ -1,6 +1,7 @@
 import { default as appRoutes } from '@/Routes';
 import { ReactComponent as Logo } from '@assets/logo.svg';
 import React, { useCallback } from 'react';
+import { uid } from 'react-uid';
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -37,8 +38,8 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
           {appRoutes.map(
             (route) =>
               route.isNavigation && (
-                <NavItem>
-                  <NavLink>
+                <NavItem key={uid(route)}>
+                  <NavLink tag="div">
                     <Link
                       to={route.path as string}
                       onClick={() => toogleNavBar(false)}

@@ -26,18 +26,25 @@ const Contact: React.FC = () => {
       <Row>
         <Col md={4} sm={12}>
           <Card>
-            <CardTitle>
-              <FontAwesomeIcon icon={faMobileAlt} />
-            </CardTitle>
-            <CardSubtitle>+111 111 1111</CardSubtitle>
+            <a href={`tel:${process.env.REACT_APP_PHONE_NUMBER}`}>
+              <CardTitle>
+                <FontAwesomeIcon icon={faMobileAlt} />
+              </CardTitle>
+              <CardSubtitle>{process.env.REACT_APP_PHONE_NUMBER}</CardSubtitle>
+            </a>
           </Card>
         </Col>
         <Col md={4} sm={12}>
           <Card>
-            <CardTitle>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </CardTitle>
-            <CardSubtitle>email@address.com</CardSubtitle>
+            <a
+              href={`mailto:${process.env.REACT_APP_EMAIL_ADDRESS}?subject=Hello Vlad Krasovski`}
+            >
+              <CardTitle>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </CardTitle>
+
+              <CardSubtitle>{process.env.REACT_APP_EMAIL_ADDRESS}</CardSubtitle>
+            </a>
           </Card>
         </Col>
         <Col md={4} sm={12}>

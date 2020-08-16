@@ -8,8 +8,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Button, Container } from 'reactstrap';
 import { useLifecycle } from 'beautiful-react-hooks';
+import { Link } from 'react-router-dom';
+import { PATH_EDUCATION } from '@/Routes';
 
-const IamStrings = ['A Developer', 'A Youtuber', 'A Designer', 'A Father'];
+const IamStrings = [
+  'A Developer',
+  'An Architect',
+  'An Inventor',
+  'A Designer',
+  'A Youtuber',
+];
 
 const Home: React.FC = () => {
   const [currentText, setCurrentText] = useState<string>(IamStrings[0]);
@@ -37,35 +45,47 @@ const Home: React.FC = () => {
     <div className="home-content">
       <Container fluid className=" text-center home-container">
         <h1>Hi I'm {currentText}</h1>
-        <Button
-          size="md"
-          tag="a"
-          outline
-          className="contact-me-button"
-          color="info"
-        >
-          Contact Me
-        </Button>
+        <Link to={PATH_EDUCATION}>
+          <Button size="md" outline className="contact-me-button" color="info">
+            My Works
+          </Button>
+        </Link>
       </Container>
 
       <ul className="sci mb-0">
         <li>
-          <a href="#">
+          <a
+            href={process.env.REACT_APP_FACEBOOK_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href={process.env.REACT_APP_INSTAGRAM_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href={process.env.REACT_APP_GITHUB_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href={process.env.REACT_APP_LINKED_IN_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </li>

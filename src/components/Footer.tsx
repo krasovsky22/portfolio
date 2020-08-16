@@ -12,7 +12,6 @@ import {
 
 const Footer: React.FC = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <footer className={classNames({ 'd-none': pathname === '/' })}>
@@ -25,16 +24,32 @@ const Footer: React.FC = () => {
         <Col md={4} />
         <Col md={4} sm={12}>
           <div className="sm d-flex justify-content-around">
-            <a href="#">
+            <a
+              href={process.env.REACT_APP_FACEBOOK_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="#">
+            <a
+              href={process.env.REACT_APP_INSTAGRAM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="#">
+            <a
+              href={process.env.REACT_APP_GITHUB_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="#">
+            <a
+              href={process.env.REACT_APP_LINKED_IN_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
