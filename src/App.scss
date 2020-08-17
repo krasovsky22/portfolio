@@ -1,6 +1,6 @@
 $media-max-width: 575px;
 $light-blue: #48dbfb;
-$color-white: #fff;
+$color-white: #f8f9fa;
 $color-grey: #353b48;
 $color-green: #386641;
 
@@ -101,7 +101,7 @@ footer {
 
 section {
   height: 90%;
-  background: linear-gradient(45deg, #ffffff, #d7d8da);
+  background: $color-white;
   background-attachment: fixed;
 
   .section-title {
@@ -352,6 +352,32 @@ section {
           background-color: $light-blue;
           color: $color-white;
         }
+      }
+    }
+  }
+
+  .playground-container {
+    min-width: 100%;
+
+    .navigation {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+
+      .col {
+        border: 4px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+      }
+
+      div {
+        animation: none !important;
       }
     }
   }
