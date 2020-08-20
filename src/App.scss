@@ -376,7 +376,9 @@ section {
         height: 100px;
       }
 
-      div {
+      div,
+      div::before {
+        -webkit-animation: none !important;
         animation: none !important;
       }
     }
