@@ -28,7 +28,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
   ]);
 
   return (
-    <Navbar light full={true} expand="sm" fixed="top" color="light">
+    <Navbar light expand="sm" fixed="top" color="light">
       <NavbarBrand href="/" className="logo">
         <Logo />
       </NavbarBrand>
