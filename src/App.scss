@@ -8,6 +8,23 @@ $color-green: #386641;
   border-radius: 20px !important;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: $color-grey !important;
+
+  .modal-header {
+    color: $color-white;
+    border: none;
+
+    button {
+      color: $color-white;
+    }
+  }
+}
+
 .navbar {
   .logo {
     width: 44px;
@@ -359,30 +376,18 @@ section {
   .playground-container {
     min-width: 100%;
 
-    .navigation {
-      position: absolute;
-      bottom: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 100;
-      justify-content: center;
-      align-items: center;
+    div,
+    div::before {
+      -webkit-animation: none !important;
+      animation: none !important;
+    }
 
-      .col {
-        border: 4px solid #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100px;
-        height: 100px;
-
-        max-height: 80vh;
-      }
-
-      div,
-      div::before {
-        -webkit-animation: none !important;
-        animation: none !important;
-      }
+    .row > * {
+      display: grid;
+      align-content: center;
+      border: 1px $color-grey solid;
+      border-radius: 5px;
+      background-color: $color-white;
     }
   }
 
