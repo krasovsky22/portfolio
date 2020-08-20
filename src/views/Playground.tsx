@@ -1,12 +1,16 @@
 import React, { useState, useCallback } from 'react';
 
 import PlaneExperiment from 'experiment-css-responsive-plane';
+import PageNotFoundError from 'experiment-page-not-found';
+
 import { Row, Col } from 'reactstrap';
 
+import 'experiment-page-not-found/dist/index.css';
 import 'experiment-css-responsive-plane/dist/index.css';
 
 const PlaneComponent = <PlaneExperiment />;
-const activeComponents = [PlaneComponent];
+const PageNotFoundErrorComponent = <PageNotFoundError />;
+const activeComponents = [PlaneComponent, PageNotFoundErrorComponent];
 
 const Playground: React.FC = () => {
   const [activeExperimentIndex, setActiveExperimentIndex] = useState<number>(0);
