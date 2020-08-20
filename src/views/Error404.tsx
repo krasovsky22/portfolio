@@ -1,14 +1,11 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import PageNotFoundError from 'experiment-page-not-found';
+import 'experiment-page-not-found/dist/index.css';
 
 const Error404: React.FC = () => {
-  const location = useLocation();
-
   return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
+    <div className="page-not-found-container">
+      <PageNotFoundError />
     </div>
   );
 };
