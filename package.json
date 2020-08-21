@@ -23,6 +23,7 @@
     "customize-cra": "^1.0.0",
     "dotenv": "^8.2.0",
     "experiment-css-responsive-plane": "github:krasovsky22/experiment-css-responsive-plane",
+    "experiment-loading": "^1.0.0",
     "experiment-page-not-found": "^1.0.2",
     "firebase": "^7.17.2",
     "husky": "^4.2.5",

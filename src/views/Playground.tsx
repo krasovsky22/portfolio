@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import PlaneExperiment from 'experiment-css-responsive-plane';
 import PageNotFoundError from 'experiment-page-not-found';
+import Loading from 'experiment-loading';
 
 import { Row, Col, Modal, ModalBody, ModalHeader } from 'reactstrap';
 
@@ -14,15 +15,20 @@ type ActiveComponentType = {
 };
 const PlaneComponent = <PlaneExperiment />;
 const PageNotFoundErrorComponent = <PageNotFoundError />;
+const LoadingComponent = <Loading />;
 
 const activeComponents: ActiveComponentType[] = [
   {
     component: PlaneComponent,
-    title: 'Responsive Flying Plane using pure css',
+    title: 'Responsive Flying Plane using pure css.',
   },
   {
     component: PageNotFoundErrorComponent,
-    title: 'Fun 404 Page Not Found',
+    title: 'Fun 404 Page Not Found.',
+  },
+  {
+    component: LoadingComponent,
+    title: 'Funny Loading progress bar.',
   },
 ];
 

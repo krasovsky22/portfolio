@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
+
+import Loading from 'experiment-loading';
+import 'experiment-loading/dist/index.css';
 import { default as appRoutes } from './Routes';
 
 const App: React.FC = () => {
@@ -12,7 +15,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <NavigationBar toogleNavBar={toggleNavBar} isToggled={isToggled} />
           <section
             className={classNames({

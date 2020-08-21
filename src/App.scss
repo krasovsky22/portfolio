@@ -398,6 +398,16 @@ section {
   }
 }
 
+.modal {
+  .modal-header span {
+    top: 0px !important;
+  }
+
+  .modal-body {
+    height: 70vh;
+  }
+}
+
 .sci {
   position: absolute;
   display: flex;

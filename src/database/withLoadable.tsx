@@ -1,5 +1,5 @@
 import Error from '@/components/Error';
-import Loading from '@/components/Loading';
+import Loading from 'experiment-loading';
 import React from 'react';
 import { useList } from 'react-firebase-hooks/database';
 
