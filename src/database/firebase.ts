@@ -14,11 +14,25 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+export interface PreviouExperienceType {
+  company: string;
+  description: string[];
+  end_date: string;
+  start_date: string;
+  title: string;
+}
+
 export const PreviousExperienceDatabase = firebase
   .database()
   .ref('previous_experience');
 
 export const AboutMeDatabase = firebase.database().ref('about_me');
+
+export interface AboutMeDescriptionType {
+  title: string;
+  description: string;
+  sub_descriptions?: string[];
+}
 
 export type ContactMeFieldsType = {
   name: string;

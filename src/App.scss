@@ -375,20 +375,6 @@ section {
 
   .playground-container {
     min-width: 100%;
-
-    div,
-    div::before {
-      -webkit-animation: none !important;
-      animation: none !important;
-    }
-
-    .row > * {
-      display: grid;
-      align-content: center;
-      border: 1px $color-grey solid;
-      border-radius: 5px;
-      background-color: $color-white;
-    }
   }
 
   .page-not-found-container {
@@ -398,6 +384,10 @@ section {
   }
 }
 
+.loading-container {
+  height: 100%;
+}
+
 .modal {
   .modal-header span {
     top: 0px !important;
@@ -405,6 +395,12 @@ section {
 
   .modal-body {
     height: 70vh;
+
+    @media (max-width: $media-max-width) {
+      .loading-container {
+        height: 70vh;
+      }
+    }
   }
 }
 

@@ -1,0 +1,81 @@
+{
+  "about_me": [
+    {
+      "sub_descriptions": [
+        "I design and code beautifully simple things,",
+        "and I love what I do."
+      ],
+      "title": "Hi"
+    },
+    {
+      "description": "I enjoy turning complex problems into simple, beautiful and intuitive designs.",
+      "title": "I Am"
+    },
+    {
+      "sub_descriptions": [
+        " New experiences and challenges are my thing.",
+        " If you have any cool projects or opportunities, get in touch!"
+      ],
+      "title": "I will"
+    }
+  ],
+  "previous_experience": [
+    {
+      "company": "Ambry Genetics",
+      "description": [
+        "I define and build new features in a modular, testable manner using React on a frontend and symfony/kohana on a backend.",
+        "I also maintain the codebase, assist in the REST API design process, resolve app issues reported by our users, and perform code reviews for other team members. ",
+        "I define and migrate existing features into aws labmda functions.",
+        "I dockerized exising applications.",
+        "I Created automated build and deploment process in bamboo.",
+        "I handled and managed developmentsprints, process and requests in JIRA.",
+        "Technology used: php7.4, javascript, node, Perl, python, Docker, Mongo, AWS Labmda functions, Rabbit MQ, Jira",
+        "Frameworks Used: Symfony (2,3,4,5), React (15,16), Kohana, Symfony API Platform",
+        "Clouds: AWS , Google"
+      ],
+      "end_date": "Now",
+      "start_date": "June 2016",
+      "title": "Software Architect"
+    },
+    {
+      "company": "CloudMarketing Inc",
+      "description": [
+        "Migrated existing code from php5.2 to 5.6",
+        "Migrated existing code into symfony framework.",
+        "Designed and developed dynamic,fully automated and aminated sales boards using php and jQuery.",
+        "Designing and developer various API's for different call centers and clients.",
+        "Technology used: php5.6, javascript",
+        "Frameworks Used: Symfony (2)"
+      ],
+      "end_date": "2016",
+      "start_date": "2016",
+      "title": "Lead Web Developer"
+    },
+    {
+      "company": "Airsoft Megastore",
+      "description": [
+        "Designed and developed interactive user interface for gunbuilder using javascript and php.",
+        "Created automated system to allow sales representatives generate new gun builds using php with CodeIgniter.",
+        "Designed and develop internal system using php in CodeIgniter to keep track of current priorities, shipping info, sales statistics and charts.",
+        "Started migration from exising sales platform into magento platform. Developed magento extentions for future sales platform.",
+        "Technology used: php5.6, javascript",
+        "Frameworks Used: Code Ignitor, Magento"
+      ],
+      "end_date": "2016",
+      "start_date": "2015",
+      "title": "Web Developer"
+    },
+    {
+      "company": "Vibe Media Inc.",
+      "description": [
+        "Maintained existing website, handles technical troubleshooting, system crashes, slow-downs, ddos attacks, documentation.",
+        "Designed and developed any user feature requests using php",
+        "Created patches for existing custom framework",
+        "Technology used: php5.6, javascript, oracle"
+      ],
+      "end_date": "2015",
+      "start_date": "2013",
+      "title": "Web Developer"
+    }
+  ]
+}

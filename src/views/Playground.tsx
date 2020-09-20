@@ -4,7 +4,17 @@ import PlaneExperiment from 'experiment-css-responsive-plane';
 import PageNotFoundError from 'experiment-page-not-found';
 import Loading from 'experiment-loading';
 
-import { Row, Col, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import {
+  Row,
+  Col,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  Card,
+  CardBody,
+  CardFooter,
+  CardText,
+} from 'reactstrap';
 
 import 'experiment-page-not-found/dist/index.css';
 import 'experiment-css-responsive-plane/dist/index.css';
@@ -12,10 +22,15 @@ import 'experiment-css-responsive-plane/dist/index.css';
 type ActiveComponentType = {
   title: string;
   component: React.ReactNode;
+  github?: string;
 };
 const PlaneComponent = <PlaneExperiment />;
 const PageNotFoundErrorComponent = <PageNotFoundError />;
-const LoadingComponent = <Loading />;
+const LoadingComponent = (
+  <div className="loading-container">
+    <Loading />
+  </div>
+);
 
 const activeComponents: ActiveComponentType[] = [
   {
@@ -56,7 +71,13 @@ const Playground: React.FC = () => {
             className="cursor-pointer m-2"
             title={title}
           >
-            {component}
+            <Card>
+              <CardBody> {component}</CardBody>
+              <CardText className="text-center">
+                <h3>Click</h3>
+                <p>{title}</p>
+              </CardText>
+            </Card>
           </Col>
         ))}
       </Row>

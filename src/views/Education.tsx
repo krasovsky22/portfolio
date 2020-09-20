@@ -1,16 +1,11 @@
 import React from 'react';
 import { Row, Col, Card, CardTitle, CardBody, CardHeader } from 'reactstrap';
 import { uid } from 'react-uid';
-import { PreviousExperienceDatabase } from '@/database/firebase';
+import {
+  PreviousExperienceDatabase,
+  PreviouExperienceType,
+} from '@/database/firebase';
 import withLoadable, { injectedLoadableProps } from '@/database/withLoadable';
-
-type PreviouExperienceType = {
-  company: string;
-  description: string[];
-  end_date: string;
-  start_date: string;
-  title: string;
-};
 
 const Education: React.FunctionComponent<injectedLoadableProps<
   PreviouExperienceType

@@ -1,13 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, CardTitle, CardBody, CardText } from 'reactstrap';
 import withLoadable, { injectedLoadableProps } from '@/database/withLoadable';
-import { AboutMeDatabase } from '@/database/firebase';
-
-type AboutMeDescriptionType = {
-  title: string;
-  description: string;
-  sub_descriptions?: string[];
-};
+import { AboutMeDatabase, AboutMeDescriptionType } from '@/database/firebase';
 
 const About: React.FunctionComponent<injectedLoadableProps<
   AboutMeDescriptionType
@@ -47,3 +41,5 @@ const About: React.FunctionComponent<injectedLoadableProps<
 };
 
 export default withLoadable<AboutMeDescriptionType>(About, AboutMeDatabase);
+
+//I design and code beautifully simple things, and I love what I do.
