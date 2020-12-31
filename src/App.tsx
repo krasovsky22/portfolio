@@ -15,7 +15,13 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Router>
-        <Suspense fallback={<Loading />}>
+        <Suspense
+          fallback={
+            <section>
+              <Loading />
+            </section>
+          }
+        >
           <NavigationBar toogleNavBar={toggleNavBar} isToggled={isToggled} />
           <section
             className={classNames({
