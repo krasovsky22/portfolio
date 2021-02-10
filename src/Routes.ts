@@ -23,24 +23,17 @@ const AppRoutes: AppRouteProps[] = [
   {
     path: PATH_ABOUT,
     exact: true,
-    name: 'About',
+    name: 'Works',
     isNavigation: true,
-    component: lazy(() => import('@views/About')),
+    component: lazy(() => import('@/views/Works')),
   },
   {
     path: PATH_EDUCATION,
     exact: true,
-    name: 'Works',
+    name: 'Resume',
     isNavigation: true,
-    component: lazy(() => import('@views/Education')),
+    component: lazy(() => import('@views/Resume')),
   },
-  // {
-  //   path: PATH_PLAYGROUND,
-  //   exact: true,
-  //   name: 'Playground',
-  //   isNavigation: true,
-  //   component: lazy(() => import('@views/Playground')),
-  // },
   {
     path: PATH_CONTACT,
     exact: true,
