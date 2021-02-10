@@ -2,7 +2,7 @@ import { RouteProps } from 'react-router-dom';
 
 import { lazy } from 'react';
 
-export const PATH_ABOUT = '/about';
+export const PATH_ABOUT = '/works';
 export const PATH_EDUCATION = '/education';
 export const PATH_PLAYGROUND = '/playground';
 export const PATH_CONTACT = '/contact';
