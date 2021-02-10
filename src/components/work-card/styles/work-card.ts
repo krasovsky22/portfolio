@@ -67,8 +67,7 @@ export const CardBody = styled.div<CardBodyType>`
     z-index: 99;
 
     ${CardTitle}, ${CardSubTitle} {
-        display: block;
-}
+      display: block;
     }
   }
 `;
