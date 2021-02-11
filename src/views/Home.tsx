@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import { Button, Container } from 'reactstrap';
 import { useLifecycle } from 'beautiful-react-hooks';
 import { Link } from 'react-router-dom';
-import { PATH_EDUCATION } from '@/Routes';
+import { PATH_WORKS } from '@/Routes';
 
 const IamStrings = [
   'A Developer',
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
     <div className="home-content">
       <Container fluid className=" text-center home-container">
         <h1>Hi I'm {currentText}</h1>
-        <Link to={PATH_EDUCATION}>
+        <Link to={PATH_WORKS}>
           <Button size="md" outline className="contact-me-button" color="info">
             My Works
           </Button>

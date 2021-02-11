@@ -2,7 +2,7 @@ import { RouteProps } from 'react-router-dom';
 
 import { lazy } from 'react';
 
-export const PATH_ABOUT = '/works';
+export const PATH_WORKS = '/works';
 export const PATH_EDUCATION = '/education';
 export const PATH_PLAYGROUND = '/playground';
 export const PATH_CONTACT = '/contact';
@@ -21,7 +21,7 @@ const AppRoutes: AppRouteProps[] = [
     component: lazy(() => import('@views/Home')),
   },
   {
-    path: PATH_ABOUT,
+    path: PATH_WORKS,
     exact: true,
     name: 'Works',
     isNavigation: true,
