@@ -9,7 +9,6 @@ import React, { useState } from 'react';
 import { Button, Container } from 'reactstrap';
 import { useLifecycle } from 'beautiful-react-hooks';
 import { Link } from 'react-router-dom';
-import { PATH_WORKS } from '@/Routes';
 
 const IamStrings = [
   'A Developer',
@@ -45,11 +44,11 @@ const Home: React.FC = () => {
     <div className="home-content">
       <Container fluid className=" text-center home-container">
         <h1>Hi I'm {currentText}</h1>
-        <Link to={PATH_WORKS}>
+        <a href="mailto:vlad.krasovski@yahoo.com">
           <Button size="md" outline className="contact-me-button" color="info">
-            My Works
+            Contact Me
           </Button>
-        </Link>
+        </a>
       </Container>
 
       <ul className="sci mb-0">
