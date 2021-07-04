@@ -1,6 +1,5 @@
 import Footer from '@components/Footer';
 import NavigationBar from '@components/NavigationBar';
-import classNames from 'classnames';
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
@@ -23,17 +22,12 @@ const App: React.FC = () => {
           }
         >
           <NavigationBar toogleNavBar={toggleNavBar} isToggled={isToggled} />
-          <section
-            className={classNames({
-              active: isToggled,
-            })}
-          >
-            <Switch>
-              {appRoutes.map((route, index) => (
-                <Route key={index} {...route}></Route>
-              ))}
-            </Switch>
-          </section>
+
+          <Switch>
+            {appRoutes.map((route, index) => (
+              <Route key={index} {...route} />
+            ))}
+          </Switch>
         </Suspense>
         <Footer />
       </Router>
