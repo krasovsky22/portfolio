@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classNames from 'classnames';
 import {
   faFacebook,
   faInstagram,
@@ -11,13 +10,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
-  const { pathname } = useLocation();
-
   return (
-    <footer className={classNames({ 'd-none': pathname === '/' })}>
+    <footer>
       <Row>
         <Col className="copyright">
-          &copy; 2020 | Created & Designed by <Link to="/">Vlad Krasovski</Link>
+          &copy; 2021 | Created & Designed by <Link to="/">Vlad Krasovski</Link>
         </Col>
       </Row>
       <Row>
